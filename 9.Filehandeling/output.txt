@@ -1,0 +1,3 @@
+Hello, this is a sample text file.
+Java file handling is interesting!
+Appending new data to the file.
