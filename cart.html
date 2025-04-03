@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="'x-icon" href="logo2.png">
+    <title>FestVista</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="cursor.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo">
+                <div class="logo"></div>
+            </div>
+            <div class="search">
+                <select class="select">
+                    <option>All</option>
+                    <option>Sweet</option>
+                    <option>chat</option>
+                </select>
+                <input placeholder="Search Food" class="searchbar"/>
+                <div class="searchicon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                
+            </div>
+
+            <a href="#" style="text-decoration: none;">
+                <div class="account">
+                    <i class="fa-regular fa-circle-user"></i>
+                </div>
+            </a>
+
+
+
+        </div>
+
+        <div class="navbar-2">
+            <div class="design"></div>
+            <a href="index.html" style="text-decoration: none;"><div class="home option">Home</div></a>
+            <a href="menu.html" style="text-decoration: none;"><div class="menu option">Menu</div></a>
+            <a href="ret.html" style="text-decoration: none;"><div class="retaurents option">Restaurents</div></a>
+            <a href="about.html" style="text-decoration: none;"><div class="about option">About</div></a>
+            <div class="cart option" style="background-color: #F4EBD0;color:#203c34;cursor: pointer;border-radius: 5px;padding: 2px;">Cart</div>
+            <div class="design"></div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="cartpage">
+            <button class="btn">Order Now</button>
+            <div class="cartpagecontent">
+            </div>
+        </div>
+    </div>
+<script src="cart.js"></script>
+<script src="cursor.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        console.log("Page loaded, checking login status...");
+
+        var accountIcon = document.getElementById("account-login");
+        if (!accountIcon) {
+            console.error("Account icon not found! Check your HTML.");
+            return;
+        }
+
+        var loggedIn = localStorage.getItem("loggedIn");
+        console.log("Logged in status:", loggedIn);
+
+        // Fix for back button issue - forces a reload when navigating back
+        window.addEventListener("pageshow", function (event) {
+            if (event.persisted) {
+                window.location.reload();
+            }
+        });
+
+        // Handle account icon click
+        accountIcon.addEventListener("click", function () {
+            if (loggedIn == "true") {
+                console.log("Redirecting to account page...");
+                window.location.href = "account.html";
+            } else {
+                console.log("Redirecting to login page...");
+                window.location.href = "design.html";
+            }
+        });
+    });
+</script>
+</body>
+</html>

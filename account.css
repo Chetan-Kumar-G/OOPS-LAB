@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+body{
+    display: flex;
+    background-color:#203c34;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.accountdetails{
+    background-color: #F4EBD0;
+    padding:1rem;
+    width: 70%;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    
+}
+
+.accountdetails h1, .head{
+    font-family: 'Cinzel Decorative', serif;
+}
+
+
+
+.accountdetails div{
+    border:2px solid #203c34;
+    width: 50%;
+    height: 2vw;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap: break-word;
+    font-size: 1.3vw;
+}
+
+.logoutbtn{
+    
+    margin-top: 30px;
+}
+
+button{
+    border: 1px solid #D6AD60;
+    width: 50%;
+    height: 100%;
+    border: none;
+    border-collapse: collapse;
+    font-family: 'Cinzel Decorative', serif;
+    font-weight: 600;
+    background-color: #203c34;
+    color: #F4EBD0;
+    font-size: 1.3vw;
+    
+}
+
+#logoutBtn{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-right: 1px solid #D6AD60;
+}
+
+#edit{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left: 1px solid #D6AD60;
+}
+
+
+
+.logo{
+    width: 60px;
+    height: 60px;
+    background-image: url("logo2.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}

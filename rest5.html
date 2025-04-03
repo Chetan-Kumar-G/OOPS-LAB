@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="'x-icon" href="logo2.png">
+    <title>FestVista</title>
+    <link rel="stylesheet" href="sweet.css">
+    <link rel="stylesheet" href="restaurent.css">
+    <link rel="stylesheet" href="book123.css">
+    <link rel="stylesheet" href="cursor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo">
+                <a href="index.html">
+                <div class="logo"></div>
+                </a>
+            </div>
+            <div class="search">
+                <select class="select">
+                    <option>All</option>
+                    <option>Sweet</option>
+                    <option>chat</option>
+                </select>
+                <input placeholder="Search Food" class="searchbar"/>
+                <div class="searchicon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                
+            </div>
+            <a href="#" style="text-decoration: none;" id="account-login">
+                <div class="account">
+                    <i class="fa-regular fa-circle-user"></i>
+                </div>
+            </a>
+        </div>
+
+        <div class="navbar-2">
+            <div class="design"></div>
+            <div class="Sweets option">Restaurant</div>
+            <div class="design"></div>
+        </div>
+    </header>
+
+    <div class="body">
+         
+        <div class="restaurentheader">
+            <h1>Little North Fine Dining</h1>
+            <div class="restaurentimage" style="background-image: url('rest/5.png');">
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="book">
+                <!-- For Next/Prev Controls -->
+                <input type="checkbox" id="c1">
+                <input type="checkbox" id="c2">
+                <input type="checkbox" id="c3">
+                <div class="restaurantinformation"> 
+                    <img src="border.svg" alt="border" class="restaurantinformationimage">
+                    <table>
+                        <tr>
+                            <th>Restaurant Name:</th>
+                            <td>Little North Fine Dining</td>
+                        </tr>
+
+                        <tr>
+                            <th>Cuisine Type:</th>
+                            <td>Indian,Chineese</td>
+                        </tr>
+
+                        <tr>
+                            <th>Location:</th>
+                            <td>472, Kilpauk Garden Road, Chennai, Tamil Nadu 600010</td>
+                        </tr>
+
+                        <tr>
+                            <th rowspan="3">Contact Information:</th>
+                            <td>📞 +91 99921 33421</td>
+                        </tr>
+
+                        <tr>
+                            <td>✉️ contact@litnorth.in</td>
+                        </tr>
+
+                        <tr>
+                            <td>🌐 www.litnorth.in</td>
+                        </tr>
+                        
+                        <tr>
+                            <th>Operating Hours:</th>
+                            <td>Mon-Sun: 11:00 AM – 12:00 AM</td>
+                        </tr>
+
+                        <tr>
+                            <th>Pricing Range:</th>
+                            <td> High-range ₹₹₹</td>
+                        </tr>
+
+                        <tr>
+                            <th>Seating Capacity:</th>
+                            <td> 100 seats</td>
+                        </tr>
+                    </table>
+                    <img src="border.svg" alt="border" class="restaurantinformationimage">
+                </div>
+                <!-- Pages -->
+                <div class="flip-book">
+                    <!-- Page 1 -->
+                    <div class="flip" id="p1">
+                          <div class="back">
+                              <div class="menu-section">
+                                  <h2>🥗 Starters</h2>
+                                  <p>Veg Spring Rolls <span>₹120</span></p>
+                                  <p>Paneer Tikka <span>₹180</span></p>
+                                  <p>Hara Bhara Kebab <span>₹150</span></p>
+                                  <p>Chilli Paneer (Dry) <span>₹190</span></p>
+                                  <p>French Fries <span>₹100</span></p>
+                                  <p>Masala Papad <span>₹50</span></p>
+                              </div>
+                              <label for="c1" class="back-btn">Before</label>
+                          </div>
+                          <div class="front" style="background-image: url('MENU.png'); background-size: contain;">
+  
+                              <label for="c1" class="next-btn">NEXT</label>
+                          </div>
+                    </div>
+                    <!-- Page 2 -->
+                    <div class="flip" id="p2">
+                          <div class="back">
+                              
+                              <div class="menu-section">
+                                  <h2>🍛 Main Course</h2>
+                                  <p>Paneer Butter Masala <span>₹220</span></p>
+                                  <p>Kadai Paneer <span>₹230</span></p>
+                                  <p>Malai Kofta <span>₹240</span></p>
+                                  <p>Chole Bhature <span>₹180</span></p>
+                                  <p>Veg Kolhapuri <span>₹210</span></p>
+                                  <p>Dal Makhani <span>₹200</span></p>
+                                  <p>Mixed Veg Curry <span>₹190</span></p>
+                              </div>
+  
+                              <div class="menu-section">
+                                  <h2>🍚 Rice & Biryani</h2>
+                                  <p>Veg Fried Rice <span>₹160</span></p>
+                                  <p>Jeera Rice <span>₹140</span></p>
+                                  <p>Paneer Biryani <span>₹220</span></p>
+                                  <p>Veg Pulao <span>₹180</span></p>
+                                  <p>Curd Rice <span>₹130</span></p>
+                              </div>
+                              <label for="c2" class="back-btn">Before</label>
+                          </div>
+                          <div class="front">
+                              <div class="menu-section">
+                                  <h2>🍲 Soups</h2>
+                                  <p>Tomato Soup <span>₹90</span></p>
+                                  <p>Manchow Soup <span>₹100</span></p>
+                                  <p>Sweet Corn Soup <span>₹100</span></p>
+                                  <p>Hot & Sour Soup <span>₹110</span></p>
+                              </div>
+                              <label for="c2" class="next-btn">NEXT</label>
+                          </div>
+                    </div>
+                    <!-- Page 3 -->
+                    <div class="flip" id="p3">
+                          <div class="back">
+                              <div class="menu-section">
+                                  <h2>🍹 Beverages</h2>
+                                  <p>Fresh Lime Juice <span>₹80</span></p>
+                                  <p>Lassi (Sweet/Salted) <span>₹100</span></p>
+                                  <p>Cold Coffee <span>₹120</span></p>
+                                  <p>Masala Chai <span>₹50</span></p>
+                              </div>
+                              
+                              <div class="menu-section">
+                                  <h2>🍨 Desserts</h2>
+                                  <p>Gulab Jamun (2 pcs) <span>₹90</span></p>
+                                  <p>Rasmalai (2 pcs) <span>₹120</span></p>
+                                  <p>Ice Cream (Single Scoop) <span>₹80</span></p>
+                                  <p>Gajar Ka Halwa <span>₹130</span></p>
+                              </div>
+                              <label for="c3" class="back-btn">Before</label>
+                          </div>
+                          <div class="front"> 
+                              
+                              <div class="menu-section">
+                                  <h2>🍞 Indian Breads</h2>
+                                  <p>Tandoori Roti <span>₹40</span></p>
+                                  <p>Butter Naan <span>₹60</span></p>
+                                  <p>Garlic Naan <span>₹70</span></p>
+                                  <p>Laccha Paratha <span>₹70</span></p>
+                              </div>
+  
+                              <div class="menu-section">
+                                  <h2>🍜 Chinese & Fast Food</h2>
+                                  <p>Veg Hakka Noodles <span>₹160</span></p>
+                                  <p>Chilli Garlic Noodles <span>₹180</span></p>
+                                  <p>Manchurian Gravy <span>₹190</span></p>
+                                  <p>Cheese Pizza <span>₹250</span></p>
+                                  <p>Veg Burger <span>₹140</span></p>
+                              </div>
+                              <label for="c3" class="next-btn">NEXT</label>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.954374972693!2d80.2345171748434!3d13.083817487241987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265d5aaba8b07%3A0x3d5dd60f9771d3c2!2sLittle%20North%20Fine%20Dining%20(Veg%20Only)!5e1!3m2!1sen!2sin!4v1741524297021!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> 
+        
+
+         
+    </div>
+    <script src="cursor.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("Page loaded, checking login status...");
+    
+            var accountIcon = document.getElementById("account-login");
+            if (!accountIcon) {
+                console.error("Account icon not found! Check your HTML.");
+                return;
+            }
+    
+            var loggedIn = localStorage.getItem("loggedIn");
+            console.log("Logged in status:", loggedIn);
+    
+            // Fix for back button issue - forces a reload when navigating back
+            window.addEventListener("pageshow", function (event) {
+                if (event.persisted) {
+                    window.location.reload();
+                }
+            });
+    
+            // Handle account icon click
+            accountIcon.addEventListener("click", function () {
+                if (loggedIn == "true") {
+                    console.log("Redirecting to account page...");
+                    window.location.href = "account.html";
+                } else {
+                    console.log("Redirecting to login page...");
+                    window.location.href = "design.html";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

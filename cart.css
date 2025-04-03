@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+.cartpage{
+    width: 100%;
+    height: 100vh;
+    min-height: 100vw;
+    text-align: center;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+}
+
+.cartpagecontent{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cartbox{
+    margin: 20px;
+    background-color:  #F4EBD0;
+    width:40vw;
+    height:20vw;
+    border-radius: 20px;
+    padding:1vw;
+    display: flex;
+    position: relative;
+
+}
+
+.cartboxpic{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:40%;
+    height:100%;
+    border-radius: 20px;
+}
+
+.cartboxdetails{
+    width: 60%;
+    height: 80%;
+    font-size: 1.7vw;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.cartboxdetails i{
+    position: absolute;
+    right: 20px;
+    bottom:20px;
+    color: #B68D40;
+    cursor: pointer;
+}
+
+
+
+.btn{
+    margin-bottom: 1vw;
+    margin-left: 1vw;
+    padding:1vw 2vw;
+    border: none;
+    outline: none;
+    color: #Fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    border-radius: 2vw;
+    background-color: #122620;
+    font-size: 3vw;
+    width: 30vw;
+    height:10vw;
+    font-family: 'Cinzel Decorative', serif;
+    
+}
+
+
+.btn::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background-color: #122620;
+    left:0;
+    top:0;
+    border-radius: 2vw;
+}
+
+
+.btn::before{
+    content: "";
+    background: linear-gradient(45deg,#965813, #A86A1A, #B67720, #D19238, #DDA24A, #E4B05C, #EAC06F, #C4822C);
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background-size: 600%;
+    z-index:-1;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    filter:blur(4px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 2vw;
+    opacity: 0;
+
+}
+
+@keyframes glowing{
+    0%{background-position: 0 0;}
+    50%{background-position: 400% 0;}
+    100%{background-position: 0 0;}
+}
+
+
+.btn:hover::before{
+    opacity: 1;
+}
+
+.btn:active::after{
+    background: transparent;
+}
+
+.btn:active{
+    color:#122620;
+    font-weight: 900;
+}
+
+
+header{
+    z-index: 1000;
+}
+
+
+#total-price{
+    color: #B68D40;
+    display: block;
+}
+
+.quantity-controls{
+    display: flex;
+    width: 100%;
+}
+.increase , .decrease{
+    background-color: #122620;
+    width: 2vw;
+    height: 2vw;
+    margin: 5px;
+    color: #B68D40;
+    font-weight: 900;
+    font-size: 90%;
+    border-radius: 0.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.increase:hover,.decrease:hover, .cartboxdetails i:hover {
+    box-shadow: 0px 0px 10px 3px rgba(212, 160, 23, 0.7); /* Golden Glow */
+}
+
+
+.button-container {
+    position: relative;
+    width: 200px;
+    height: 50px;
+    background-color: #ff9800;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
+    position: relative;
+}
+.truck {
+    width: 40px;
+    height: 20px;
+    background-color: blue;
+    position: absolute;
+    bottom: 5px;
+    left: -40px;
+    display: flex;
+    align-items: center;
+    transition: left 2s linear;
+}
+.box {
+    width: 15px;
+    height: 15px;
+    background-color: brown;
+    position: absolute;
+    top: -10px;
+    left: 5px;
+}
+.wheel {
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -4px;
+}
+.wheel.left { left: 5px; }
+.wheel.right { right: 5px; }
+.hidden { display: none; }

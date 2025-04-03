@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="design2.css">
+    <link rel="stylesheet" href="cursor.css">
+    <link rel="shortcut icon" type="'x-icon" href="logo2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>FestVista</title>
+</head>
+<body>
+    <div class="login-box">
+        <h1>New account</h1>
+        <form id="myform" onsubmit="return validate()">
+            <div class="name box">
+                <label for="name">name</label><br>
+                <input type="text" id="name" placeholder="Full Name" required>
+                <span id="nameError" class="error"></span>
+            </div>
+
+            <div class="email box">
+                <label for="email">Email</label><br>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <span id="emailError" class="error"></span>
+            </div>
+
+            <div class="password box">
+                <label for="password">Password</label><br>
+                <input type="password" id="password" placeholder="Password" required>
+                <span id="passwordError" class="error"></span>
+            </div>
+
+
+            <div class="password box">
+                <label for="password">Confirm Password</label><br>
+                <input type="password" id="confirmpassword" placeholder="Password" required>
+                <span id="confirmpasswordError" class="error"></span>
+            </div>
+
+
+            <div class="phone box">
+                <label for="tel">Contact</label><br>
+                <input type="tel" id="tel" placeholder="Contact" required>
+                <span id="contactError" class="error"></span>
+            </div>
+
+
+            <div class="dob box">
+                <label for="dob">Date of birth</label><br>
+                <input type="date" id="dob" placeholder="DOB" required>
+                <span id="dobError" class="error"></span>
+            </div>
+
+            <div class="gender">
+                <label>Gender:</label>
+                <br>
+                <div class="male">
+                    <input type="radio" id="male" name="gen">
+                    <label for="male">Male</label>
+                </div>
+                <div class="female">
+                    <input type="radio" id="female" name="gen">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            
+            <div class="create box"><input type="submit" value="Create Account" class="btn"></div>
+            <img src="border.svg"/>
+        </form>
+        <a href="design.html"><button class="button">Already have Account?</button></a><br><br>
+        <a href="index.html"><button class="button"><i class="fa-solid fa-house"></i>   Home</button></a>
+        
+    </div>
+    <div class="container">
+        <div class="circle1">
+            <div class="mercurey m1" style="background-image: url('design/1.svg');"></div>
+            <div class="mercurey m2" style="background-image: url('design/2.svg');"></div>
+            <div class="mercurey m3" style="background-image: url('design/3.svg');"></div>
+            <div class="mercurey m4" style="background-image: url('design/4.svg');"></div>
+        </div>
+    </div>
+    <script src="cursor.js"></script>
+    <script>
+        function validate() {
+            console.log("Validation started"); // Debug message
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmpassword = document.getElementById("confirmpassword").value;
+            var contact = document.getElementById("tel").value;
+            var dob = document.getElementById("dob").value;
+            var gender = document.querySelector('input[name="gen"]:checked');
+
+            var isValid = true;
+
+            // Name validation
+            if (!name.match(/^[a-zA-Z ]+$/)) {
+                document.getElementById("nameError").innerHTML = "Please enter a valid name";
+                isValid = false;
+            } else {
+                document.getElementById("nameError").innerHTML = "";
+            }
+
+            // Email validation
+            if (!email.match(/^\S+@\S+\.\S+$/)) {
+                document.getElementById("emailError").innerHTML = "Please enter a valid email address";
+                isValid = false;
+            } else {
+                document.getElementById("emailError").innerHTML = "";
+            }
+
+            // Contact validation
+            if (!contact.match(/^\d{10}$/)) {
+                document.getElementById("contactError").innerHTML = "Enter a valid 10-digit phone number";
+                isValid = false;
+            } else {
+                document.getElementById("contactError").innerHTML = "";
+            }
+
+            // Password confirmation
+            if (password !== confirmpassword) {
+                document.getElementById("confirmpasswordError").innerHTML = "Passwords do not match";
+                isValid = false;
+            } else {
+                document.getElementById("confirmpasswordError").innerHTML = "";
+            }
+
+            if (!gender) {
+                alert("Please select your gender.");
+                isValid = false;
+            }
+
+            console.log("Validation complete, isValid: ", isValid);
+
+            if (isValid) {
+                var user = {
+                    name: name,
+                    email: email,
+                    password: password,
+                    contact: contact,
+                    dob: dob,
+                    gender: gender.id
+                };
+
+                console.log("Storing user data:", user);
+                localStorage.setItem("user", JSON.stringify(user));
+                localStorage.setItem("loggedIn", "true");
+
+                alert("Account Created Successfully!");
+                window.location.href = "account.html"; // Redirect to account page
+            } else {
+                alert("Please fix errors before submitting.");
+            }
+
+            return false; // Prevent form submission
+        }
+
+        
+    </script>
+    
+</body>
+</html>

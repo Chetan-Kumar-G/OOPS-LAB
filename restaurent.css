@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&family=EB+Garamond:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+.body{
+    /* height: 100v; */
+    display: flex;
+    /* background: linear-gradient(to bottom, #4A5A5D, #3B4A4D); */
+
+    
+}
+
+.restaurentheader{
+    height: 400px; 
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;  
+    color: #D6AD60;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.3);
+}
+
+.restaurentheader h1{
+    margin: 10px;
+}
+.restaurentimage{
+    
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+}
+
+.location{
+    display: flex;
+    border-radius: 40px;
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.location iframe{
+    border-radius: 40px;
+    background-color: bisque;
+}
+
+.restaurantinformation{
+    width: 40%;
+    height: 600px;
+    background-color: #FAF3E0;
+    margin-right: 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+    
+
+}
+
+td, th{
+    text-align: left;
+    padding-left: 10px;
+    line-height: 2.5vw;
+    font-size: 1vw;
+}
+
+table{
+    padding: 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.restaurantinformationimage{
+    width: 100%;
+    margin-top: 25px;
+}
+
+.menu-section{
+    padding-left: 20px;
+}
+
+.menu-section h2{
+    font-family: 'Cinzel Decorative', serif;
+    color: #203c34 ;
+}
+
+.menu-section p{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1vw;  
+}
+@media (max-width: 600px) {
+    .restaurantinformation{
+        width: 100%;
+        display: block;
+
+    }
+
+    td, th{
+        text-align: left;
+        padding-left: 10px;
+        line-height: 5vw;
+        font-size: 3vw;
+    }
+
+    .menu-section p{
+        font-family: 'Playfair Display', serif;
+        font-size: 2vw;  
+    }
+
+}

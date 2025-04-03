@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&family=EB+Garamond:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+/* font-family: 'Playfair Display', serif; */
+
+body{
+    background-color: #203c34;
+    display: flex;
+    justify-content: flex-end;
+}
+.login-box{
+    background-color: #F4EBD0;
+    width: 60vw;
+    /* height: 40vw; */
+    margin: 50px;
+    border-radius: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    
+}
+
+h1{
+  font-family: 'Cinzel Decorative', serif;
+}
+
+input{
+  background-color: transparent;
+  width: 100%;
+  height: 35px;
+  border:2px solid black;
+  border-radius: 20px;
+  padding-left: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  text-align: center;
+}
+
+label{
+  font-size: 1.5rem;
+  font-family: 'Cinzel Decorative', serif;
+
+}
+
+form{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    
+}
+
+.box{
+    width: 40%;
+    margin-bottom: 20px;
+}
+
+form img{
+  width: 100%;
+  margin-top: 20px;
+}
+
+.gender{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vw;
+}
+
+.gender input{
+  width: 1.5vw;
+}
+
+.male, .female{
+   display: flex;
+   align-items: center;
+}
+.btn{
+  border: none;
+  outline: none;
+  color: #Fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  border-radius: 2vw;
+  background-color: #122620;
+  width: 30vw;
+  height:45px;
+  box-sizing: border-box;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.5vw;
+}
+
+.btn:hover{
+  background-color: #5a6663;
+}
+
+.button{
+  border: none;
+  outline: none;
+  color: #Fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  border-radius: 2vw;
+  background-color: #5a6663;
+  width: 20vw;
+  height:45px;
+  box-sizing: border-box;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.2vw;
+}
+
+.button:hover{
+  background-color: #122620;
+}
+
+.create{
+    width: 100%;
+}
+
+.container {
+    width: 30vw;  /* Half of the screen width */
+    height: 100vh; /* Full height */
+    overflow: hidden; /* Hide the left half of the circle */
+    position: absolute;
+    top: 0;
+    left: 0; /* Align to the right */
+
+}
+
+.circle1{
+    height: 800px;
+     width: 800px;
+     border-radius: 50%;
+     border: 200px solid #D6AD60;
+     position: relative;
+     top: -200px;
+     right: +800px;
+     animation: rotate 20s linear infinite;
+   }
+
+
+   .mercurey {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .m1{
+    animation: mercurey-rotate1 7s linear infinite;
+  }
+
+  .m2{
+    animation: mercurey-rotate2 7s linear infinite;
+  }
+
+  .m3{
+    animation: mercurey-rotate3 7s linear infinite;
+  }
+
+  .m4{
+    animation: mercurey-rotate4 7s linear infinite;
+  }
+
+  @keyframes mercurey-rotate1 {
+    from {
+      transform:  translateX(500px) rotate(0deg);
+    }
+    to {
+      transform: translateX(500px) rotate(-360deg);
+    }
+  }
+
+  @keyframes mercurey-rotate2 {
+    from {
+      transform:  translateX(-500px) rotate(0deg);
+    }
+    to {
+      transform: translateX(-500px) rotate(-360deg);
+    }
+  }
+
+  @keyframes mercurey-rotate3 {
+    from {
+      transform:  translateY(-500px) rotate(0deg);
+    }
+    to {
+      transform: translateY(-500px) rotate(-360deg);
+    }
+  }
+
+  @keyframes mercurey-rotate4 {
+    from {
+      transform:  translateY(500px) rotate(0deg);
+    }
+    to {
+      transform: translateY(500px) rotate(-360deg);
+    }
+  }
+
+
+  @keyframes rotate {
+    from {rotate: 0deg;}
+    to {rotate: 360deg;}
+}
+
+
+@media screen and (max-width: 600px)
+{
+    .container{
+      visibility: hidden;
+    }
+
+    .login-box{
+      width: 90vw;
+    }
+
+
+    .login input ,label{
+      font-size: 1rem;
+    }
+
+    .gender input{
+      width:2.5vw;
+    }
+
+    body{
+      display: flex;
+      justify-content: center;
+    }
+    
+}
+
+
+.error{
+  color: red;
+  font-family: 'Cinzel Decorative', serif;
+}

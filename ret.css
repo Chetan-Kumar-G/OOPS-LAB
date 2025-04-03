@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+/* .restaurents{
+    width: 100%;
+    display: flex;
+}
+
+.rest{
+    width: 23rem;
+    height: 400px;
+    background-color: blue;
+    border-radius: 20px;
+    
+}
+
+.restimage{
+    width: 90%;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    margin-left:5%;
+
+
+    
+}
+ */
+.restaurants{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.rest{
+
+    height: 400px;
+    width: 23rem;
+    background-color: #F4EBD0;
+    padding:10px 0px 15px;
+    margin: 15px;
+    border-radius: 20px;
+}
+
+
+.restimage{
+    height:200px;
+    margin: 5%;
+    /* margin-bottom: 1rem; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    
+}
+
+.restname{
+    font-family:'Cinzel Decorative', serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #316757;
+}
+
+.rest:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+header{
+    z-index: 1000;
+}

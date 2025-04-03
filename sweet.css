@@ -1,0 +1,252 @@
+body{
+    margin: 0px;
+}
+
+.body {
+    display: flex;
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #5a6663;
+    
+    
+}
+
+.card {
+    width: 250px;
+    height: 350px;
+    perspective: 1000px; /* 3D effect */
+    position: relative;
+    margin: 20px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s ease-in-out; 
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front and Back styling */
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #B68D40;
+    box-sizing: border-box;
+}
+
+/* Front side */
+.card-front img {
+    width: 100%;
+    height: 60%;
+    border-radius: 10px;
+}
+
+/* Back side */
+.card-back {
+    transform: rotateY(180deg);
+    background-color: #F4EBD0;
+}
+
+
+.navbar{
+    background-color: #122620;
+    width: 100%;
+    height:80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    background-image: url(logo2.svg);
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    margin-left:1rem;
+    cursor: pointer;
+}
+
+.search{
+    height:45px;
+    width:600px;
+    border-radius:20px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #D6AD60;
+    color: #D6AD60;
+    
+}
+
+.searchbar{
+    height: 100%;
+    width:90%;
+    font-size: 20px;
+    border: none;
+    color: #D6AD60;
+    border-right: 1px solid #D6AD60;
+    background-color: transparent;
+    outline: none;
+    padding-left: 0.2rem;
+    flex-shrink: 2;
+}
+
+.searchbar::placeholder{
+    color: #D6AD60;
+    padding-left: 0.2rem;
+}
+
+.select{
+    height: 100%;
+    width:10%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    font-size:20px;
+    border: none;
+    color: #D6AD60;
+    border-right: 1px solid #D6AD60;
+    background-color: transparent;
+}
+
+.searchicon{
+    height:100%;
+    width:10%;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #D6AD60;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.account{
+    height: 40px;
+    width:40px;
+    font-size: 40px;
+    color: #D6AD60;
+    margin-right:1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/* navbar-2 */
+.navbar-2{
+    background-color: #203c34;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.option{
+    height: 95%;
+    width:fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid white; */
+    color:#F4EBD0;
+    font-size: 20px;
+    margin: clamp(0.5rem, 2vw, 3rem);
+    flex-shrink: 1;
+}
+
+
+
+.design{
+    background-image: url("design.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width:200px;
+    flex-shrink: 2;
+    min-width: 0;
+}
+
+.card .addcart{
+    width: 50%;
+    height:10%;
+    border-radius: 40px;
+    background-color: #D4A017;
+    color: #5C4033;
+    border:2px solid #5C4033;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+
+.card .addcart:hover,.add:hover {
+    box-shadow: 0px 0px 10px 3px rgba(212, 160, 23, 0.7); /* Golden Glow */
+}
+
+
+.add{
+    width:20px;
+    height:20px;
+    border-radius: 6px;
+    background-color: #D4A017;
+    color: #5C4033;
+    border:2px solid #5C4033;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    
+
+}
+
+.addvalue{
+    width:20px;
+    height:20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.adding{
+    display:flex;
+    margin-bottom: 10px;
+
+}
+
+.bottom_cart{
+    position: fixed;
+    border-radius: 50%;
+    bottom:10px;
+    right:10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    border:2px solid #122620;
+}

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+.content{
+    width: 100%;
+    height: 100%;
+}
+
+.aboutpage{
+    width: 100%;
+    border-radius: 20px;
+    /* background-color: #F4EBD0; */
+    margin-bottom: 20px;
+}
+
+
+.aboutpic{
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+}
+
+.aboutlogo{
+    background-image: url("logo2.svg");
+    width: 20vw;
+    height:20vw;
+    background-size: cover;
+}
+
+.abouttext{
+    color: #F4EBD0;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    padding:3rem;
+    font-family:'Cinzel', serif;
+    font-weight: 500;
+
+}
+
+.abouttext h4{
+    color: #D6AD60;
+    text-decoration: underline;
+}
+
+
+.btn{
+    margin-top: 10px;
+    padding:15px 40px;
+    border: none;
+    outline: none;
+    color: #Fff;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    border-radius: 12px;
+    background-color: #122620;
+    font-size: 3vw;
+}
+
+
+.btn::after{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background-color: #122620;
+    left:0;
+    top:0;
+    border-radius: 10px;
+}
+
+
+.btn::before{
+    content: "";
+    background: linear-gradient(45deg,#965813, #A86A1A, #B67720, #D19238, #DDA24A, #E4B05C, #EAC06F, #C4822C);
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background-size: 600%;
+    z-index:-1;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    filter:blur(4px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+
+}
+
+@keyframes glowing{
+    0%{background-position: 0 0;}
+    50%{background-position: 400% 0;}
+    100%{background-position: 0 0;}
+}
+
+
+.btn:hover::before{
+    opacity: 1;
+}
+
+.btn:active::after{
+    background: transparent;
+}
+
+.btn:active{
+    color:#122620;
+    font-weight: 900;
+}
+
+
+
